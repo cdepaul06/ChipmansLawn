@@ -20,8 +20,6 @@ const navLinks = [
 
 // * You can add additional content to the About section here.
 const aboutContent = {
-  id: "about-content",
-  name: "Cole's Lawn Care",
   description:
     "This is a wall of text. This is a wall of text. This is a wall of text. " +
     "This is a wall of text. This is a wall of text. This is a wall of text. " +
@@ -95,14 +93,14 @@ const servicesContent = [
   },
   // * You can uncomment this if you want to add additional services, if you offer more than 3 you can just
   // * copy and paste the above service and change the ID and content.
-  // {
-  //   id: "service-3",
-  //   title: "Whatever you want",
-  //   description:
-  //     "We will remove snow from your driveway and make it look nice.",
-  //   image: "lawn3",
-  //   details: ["Whatever you want.", "Whatever you want.", "Whatever you want."],
-  // },
+  {
+    id: "service-3",
+    title: "Snow Removal",
+    description:
+      "We will remove snow from your driveway and make it look nice.",
+    image: lawn3,
+    details: ["Whatever you want.", "Whatever you want.", "Whatever you want."],
+  },
 ];
 
 // If for whatever reason you add more constants to the global index you need to export them here.

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import ImageCarousel from "./components/ImageCarousel";
@@ -7,51 +7,31 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-function App() {
-  const carouselRef = useRef();
-  const servicesCardRef = useRef();
-  const aboutRef = useRef();
-  const contactRef = useRef();
-
-  const scrollToElement = (sectionId) => {
-    switch (sectionId) {
-      case "carousel":
-        carouselRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "services":
-        servicesCardRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "about":
-        aboutRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "contact":
-        contactRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      default:
-        window.scrollTo(0, 0);
-    }
-  };
-
+const App = () => {
   return (
     <BrowserRouter>
-      <div className='sticky top-0 z-50'>
-        <Navigation scrollToElementId={scrollToElement} />
+      <div>
+        <div className='sticky top-0 z-50'>
+          <Navigation />
+        </div>
+        <div id='carousel' className='pt-[10rem]'>
+          <ImageCarousel />
+        </div>
+        <div id='services' className='mt-[15rem]'>
+          <ServicesCard />
+        </div>
+        <div id='about' className='mt-[10rem]'>
+          <About />
+        </div>
+        <div id='contact'>
+          <Contact />
+        </div>
+        <div id='footer'>
+          <Footer />
+        </div>
       </div>
-      <div ref={carouselRef}>
-        <ImageCarousel />
-      </div>
-      <div ref={servicesCardRef}>
-        <ServicesCard scrollToElement={scrollToElement} />
-      </div>
-      <div ref={aboutRef}>
-        <About />
-      </div>
-      <div ref={contactRef}>
-        <Contact />
-      </div>
-      <Footer />
     </BrowserRouter>
   );
-}
+};
 
 export default App;

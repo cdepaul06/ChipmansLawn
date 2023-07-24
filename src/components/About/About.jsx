@@ -1,15 +1,15 @@
 import React from "react";
 import { aboutContent, aboutImage } from "../../constants";
 
-const About = ({}) => {
+const About = () => {
   return (
     <div
+      id='about'
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        marginTop: "200px",
       }}
     >
       <h1 className='text-2xl font-bold text-[#029c15]'>About</h1>
@@ -21,20 +21,16 @@ const About = ({}) => {
         }}
       >
         <img
-          id={aboutImage.id}
           src={aboutImage.src}
           alt='Lawn'
           style={{
             width: "35%",
             height: "25%",
             objectFit: "contain",
-            background:
-              "linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))",
-            marginTop: "25px",
           }}
         />
-        <div className='border border-green-500 rounded-lg mt-[20px] p-10 w-1/2 break-words'>
-          <p className='mt-5'>{aboutContent.description}</p>
+        <div className='border border-green-500 rounded-lg p-10 w-1/2 break-words'>
+          <p>{aboutContent.description}</p>
         </div>
       </div>
     </div>
