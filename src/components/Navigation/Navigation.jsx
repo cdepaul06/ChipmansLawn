@@ -47,10 +47,10 @@ const Navigation = () => {
               onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "")}
             >
               <ScrollLink
-                to={link.id} // Change this line
+                to={link.id}
                 spy={true}
                 smooth={true}
-                offset={-150}
+                offset={-175}
                 duration={500}
               >
                 {link.title}

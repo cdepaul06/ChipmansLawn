@@ -20,7 +20,7 @@ const App = () => {
         <div id='services' className='mt-[15rem]'>
           <ServicesCard />
         </div>
-        <div id='about' className='mt-[10rem]'>
+        <div id='about' className='mt-[15rem]'>
           <About />
         </div>
         <div id='contact'>

@@ -12,7 +12,7 @@ const About = () => {
         flexDirection: "column",
       }}
     >
-      <h1 className='text-2xl font-bold text-[#029c15]'>About</h1>
+      <h1 className='text-2xl font-bold text-[#029c15] p-5'>About</h1>
       <div
         style={{
           display: "flex",
@@ -29,7 +29,7 @@ const About = () => {
             objectFit: "contain",
           }}
         />
-        <div className='border border-green-500 rounded-lg p-10 w-1/2 break-words'>
+        <div className='border mt-5 border-green-500 rounded-lg p-10 w-1/2 break-words'>
           <p>{aboutContent.description}</p>
         </div>
       </div>
