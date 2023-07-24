@@ -5,7 +5,6 @@ import { BusinessLogo } from "../../assets";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navigation = () => {
-  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -14,10 +13,7 @@ const Navigation = () => {
         <Link
           to='/'
           className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          onClick={() => window.scrollTo(0, 0)}
         >
           <img
             src={BusinessLogo}
@@ -32,19 +28,7 @@ const Navigation = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${
-                active === link.title ? "text-gray-900" : "text-gray-500"
-              } group hover:text-[#00c45c] font-medium cursor-pointer relative`}
-              style={{
-                "--tw-shadow": "inset 0 -2px 0 0 #00c45c",
-                transition: "box-shadow 0.3s ease-in-out",
-                boxShadow: active === link.title ? "var(--tw-shadow)" : "",
-              }}
-              onClick={() => setActive(link.title)}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.boxShadow = "inset 0 -2px 0 0 #00c45c")
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "")}
+              className='group font-medium cursor-pointer relative'
             >
               <ScrollLink
                 to={link.id}
@@ -52,6 +36,8 @@ const Navigation = () => {
                 smooth={true}
                 offset={-175}
                 duration={500}
+                className='text-green-700 hover:text-[#00c45c] hover:underline transition-colors duration-300'
+                activeClass='text-[#0f1613]'
               >
                 {link.title}
               </ScrollLink>
@@ -70,28 +56,21 @@ const Navigation = () => {
           </svg>
           <div
             className={`${
-              !toggle ? "hidden" : "flex"
+              toggle ? "flex" : "hidden"
             } p-6 bg-gray-900 text-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
               {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-gray-300"
-                  } font-medium cursor-pointer`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                >
+                <li key={link.id} className='font-medium cursor-pointer'>
                   <ScrollLink
-                    to={link.id} // Change this line
+                    to={link.id}
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className='border border-[#029c15] text-[#029c15] px-2 py-1 rounded hover:bg-[#029c15] hover:text-white transition-colors duration-300' // add button style here
+                    className='border border-[#029c15] text-[#029c15] px-2 py-1 rounded hover:bg-[#029c15] hover:text-white transition-colors duration-300'
+                    activeClass='text-white'
+                    onClick={() => setToggle(false)}
                   >
                     {link.title}
                   </ScrollLink>
