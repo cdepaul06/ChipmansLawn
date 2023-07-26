@@ -1,6 +1,16 @@
 // * You can CTRL + CLICK on the '../assets' to see the files in the folder and add/remove as needed.
 // * Obviously you will need to import them here to be used in the app.
-import { lawn1, lawn2, lawn3, lawn4, lawn5, lawn6, lawn7webp } from "../assets";
+import {
+  cornerYard,
+  cornerYard2,
+  cornerYard3,
+  fencedYard,
+  sidewalk,
+  sidewalk2,
+  yard1,
+  yard2,
+  yardSmall,
+} from "../assets";
 
 // * You can add additional links to the navigation bar here.
 const navLinks = [
@@ -34,41 +44,51 @@ const aboutContent = {
 // * Use the imports from above as the src for the images.
 const lawnImages = [
   {
-    id: "lawn1-1",
-    src: lawn1,
-    alt: "lawn1",
+    id: "cornerYard-1",
+    src: cornerYard,
+    alt: "cornerYard",
   },
   {
-    id: "lawn2-2",
-    src: lawn2,
-    alt: "lawn2",
+    id: "cornerYard2-2",
+    src: cornerYard2,
+    alt: "cornerYard2",
   },
   {
-    id: "lawn3-3",
-    src: lawn3,
-    alt: "lawn3",
+    id: "cornerYard3-3",
+    src: cornerYard3,
+    alt: "cornerYard3",
   },
   {
-    id: "lawn4-4",
-    src: lawn4,
-    alt: "lawn4",
+    id: "fencedYard-4",
+    src: fencedYard,
+    alt: "fencedYard",
   },
   {
-    id: "lawn5-5",
-    src: lawn5,
-    alt: "lawn5",
+    id: "sidewalk-5",
+    src: sidewalk,
+    alt: "sidewalk",
   },
   {
-    id: "lawn6-6",
-    src: lawn6,
-    alt: "lawn6",
+    id: "sidewalk2-6",
+    src: sidewalk2,
+    alt: "sidewalk2",
+  },
+  {
+    id: "yard1-7",
+    src: yard1,
+    alt: "yard1",
+  },
+  {
+    id: "yard2-8",
+    src: yard2,
+    alt: "yard2",
   },
 ];
 
 const aboutImage = {
   id: "about-image",
-  src: lawn7webp,
-  alt: "lawn7webp",
+  src: cornerYard,
+  alt: "yardSmall",
 };
 
 // * This is where you can add/remove any of the services you want listed on the website.
@@ -78,7 +98,7 @@ const servicesContent = [
     id: "service-1",
     title: "Grass Mowing",
     description: "We will mow your grass and make it look nice.",
-    image: lawn5,
+    image: fencedYard,
     details: [
       "We will mow your grass and make it look nice.",
       "We will mow your grass and make it look nice.",
@@ -88,7 +108,7 @@ const servicesContent = [
     id: "service-2",
     title: "Landscaping",
     description: "We will landscape your yard and make it look nice.",
-    image: lawn1,
+    image: yard1,
     details: ["Mulching", "Trimming", "Other things"],
   },
   // * You can uncomment this if you want to add additional services, if you offer more than 3 you can just
@@ -98,7 +118,7 @@ const servicesContent = [
     title: "Snow Removal",
     description:
       "We will remove snow from your driveway and make it look nice.",
-    image: lawn3,
+    image: cornerYard,
     details: ["Whatever you want.", "Whatever you want.", "Whatever you want."],
   },
 ];

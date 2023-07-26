@@ -8,7 +8,7 @@ const Navigation = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className='flex justify-between items-center bg-white p-5 fixed top-0 z-20 w-full'>
+    <nav className='flex justify-between items-center bg-white p-5 fixed w-full'>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
