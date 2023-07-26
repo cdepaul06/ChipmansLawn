@@ -24,8 +24,8 @@ const About = () => {
           src={aboutImage.src}
           alt='Lawn'
           style={{
-            width: "35%",
-            height: "25%",
+            width: "auto",
+            height: "480px",
             objectFit: "contain",
           }}
         />

@@ -31,8 +31,8 @@ const navLinks = [
 // * You can add additional content to the About section here.
 const aboutContent = {
   description:
-    "We strive to give our customers that small business feel catering" +
-    "to their individual needs. Our team takes pride in our work and our customers satisfaction is our number one priority.",
+    "We strive to give our customers that small business feeling, catering" +
+    " to their individual needs. Our team takes pride in the work we do and our customer's satisfaction is the number one priority.",
 };
 
 // * Use the imports from above as the src for the images.

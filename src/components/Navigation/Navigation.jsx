@@ -34,7 +34,7 @@ const Navigation = () => {
                 to={link.id}
                 spy={true}
                 smooth={true}
-                offset={-175}
+                offset={0}
                 duration={500}
                 className='text-green-700 hover:text-[#00c45c] hover:underline transition-colors duration-300'
                 activeClass='text-[#0f1613]'

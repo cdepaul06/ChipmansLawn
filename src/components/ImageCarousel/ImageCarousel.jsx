@@ -5,7 +5,7 @@ import { lawnImages } from "../../constants";
 
 const ImageCarousel = () => {
   return (
-    <div className='mx-auto w-3/4 border-2 border-black shadow-lg mt-8'>
+    <div className='mx-auto w-[67%] border-2 border-black shadow-lg mt-8'>
       <Carousel
         showThumbs={false}
         showIndicators={false}
