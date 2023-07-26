@@ -31,14 +31,8 @@ const navLinks = [
 // * You can add additional content to the About section here.
 const aboutContent = {
   description:
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. ",
+    "We strive to give our customers that small business feel catering" +
+    "to their individual needs. Our team takes pride in our work and our customers satisfaction is our number one priority.",
 };
 
 // * Use the imports from above as the src for the images.
