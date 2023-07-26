@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { servicesContent } from "../../constants";
+import { Link as ScrollLink } from "react-scroll";
 
 const ServicesCard = ({}) => {
   return (
@@ -12,7 +13,6 @@ const ServicesCard = ({}) => {
               <h3 className='text-2xl font-bold text-center p-4'>
                 {service.title}
               </h3>
-              {/* <hr className='border-gray-300 border-3' /> */}
               <img
                 src={service.image}
                 alt={service.title}
@@ -28,12 +28,17 @@ const ServicesCard = ({}) => {
                     ))}
                   </ul>
                 </div>
-                <button
-                  onClick={() => scrollToElement("contact")}
-                  className='self-start mt-auto bg-[#029c15] text-white px-6 py-2 rounded-md hover:bg-[#03540d] transition-colors duration-300'
+                <ScrollLink
+                  to='contact'
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
                 >
-                  Contact Us
-                </button>
+                  <button className='self-start mt-auto bg-[#029c15] text-white px-6 py-2 rounded-md hover:bg-[#03540d] transition-colors duration-300'>
+                    Contact Us
+                  </button>
+                </ScrollLink>
               </div>
             </div>
           ))}

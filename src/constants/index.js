@@ -9,7 +9,7 @@ import {
   sidewalk2,
   yard1,
   yard2,
-  yardSmall,
+  snowPlow,
 } from "../assets";
 
 // * You can add additional links to the navigation bar here.
@@ -96,30 +96,39 @@ const aboutImage = {
 const servicesContent = [
   {
     id: "service-1",
-    title: "Grass Mowing",
-    description: "We will mow your grass and make it look nice.",
+    title: "Spring & Summer Services",
+    description: "Commercial & Residential",
     image: fencedYard,
     details: [
-      "We will mow your grass and make it look nice.",
-      "We will mow your grass and make it look nice.",
+      "Mowing",
+      "Mulching",
+      "Weed Removal",
+      "Landscape Bed Tearouts",
+      "Shrub Trimming",
     ],
   },
   {
     id: "service-2",
-    title: "Landscaping",
-    description: "We will landscape your yard and make it look nice.",
+    title: "Fall Services",
+    description: "Commercial & Residential",
     image: yard1,
-    details: ["Mulching", "Trimming", "Other things"],
+    details: [
+      "Leaf Cleanup/Mulching & Removal",
+      "Preparing Landscape Beds for Winter",
+    ],
   },
   // * You can uncomment this if you want to add additional services, if you offer more than 3 you can just
   // * copy and paste the above service and change the ID and content.
   {
     id: "service-3",
-    title: "Snow Removal",
-    description:
-      "We will remove snow from your driveway and make it look nice.",
-    image: cornerYard,
-    details: ["Whatever you want.", "Whatever you want.", "Whatever you want."],
+    title: "Winter Services",
+    description: "Commercial & Residential",
+    image: snowPlow,
+    details: [
+      "Snow Plowing",
+      "Salting of Lots & Walkways",
+      "Clearing Driveways (Residential)",
+    ],
   },
 ];
 

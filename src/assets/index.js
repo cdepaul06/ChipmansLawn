@@ -10,6 +10,7 @@ import sidewalk2 from "./sidewalk2.jpg";
 import yard1 from "./yard1.jpg";
 import yard2 from "./yard2.jpg";
 import yardSmall from "./yardSmall.jpg";
+import snowPlow from "./snowPlow.jpg";
 
 // * Make sure to export any new images you add to the assets folder
 export {
@@ -23,4 +24,5 @@ export {
   yard1,
   yard2,
   yardSmall,
+  snowPlow,
 };
