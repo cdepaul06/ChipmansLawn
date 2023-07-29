@@ -13,16 +13,16 @@ const App = () => {
       <div className='sticky top-0 z-50'>
         <Navigation />
       </div>
-      <div id='carousel' className='pt-[13rem]'>
+      <div id='carousel' className='pt-[13rem] flex justify-center'>
         <ImageCarousel />
       </div>
       <div id='services' className='pt-[15rem]'>
         <ServicesCard />
       </div>
-      <div id='about' className='pt-[15rem]'>
+      <div id='about' className='pt-[15rem] flex justify-center'>
         <About />
       </div>
-      <div id='contact'>
+      <div id='contact' className='pt-[15rem] flex justify-center'>
         <Contact />
       </div>
       <div id='footer'>
