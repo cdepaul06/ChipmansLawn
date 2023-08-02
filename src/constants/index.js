@@ -1,5 +1,5 @@
 // * You can CTRL + CLICK on the '../assets' to see the files in the folder and add/remove as needed.
-// * Obviously you will need to import them here to be used in the app.
+// * Obviously you will need to import them here to be used in the app. These will be your lawn/snow photos
 import {
   cornerYard,
   cornerYard2,
