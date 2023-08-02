@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../../constants";
-import { BusinessLogo } from "../../assets";
+import { BusinessLogo } from "../../assets"; // ! If you have a business logo, import it here and uncomment line 18-22
 import { Link as ScrollLink } from "react-scroll";
 
 const Navigation = () => {
@@ -15,11 +15,11 @@ const Navigation = () => {
           className='flex items-center gap-2'
           onClick={() => window.scrollTo(0, 0)}
         >
-          <img
+          {/* <img
             src={BusinessLogo}
             alt='logo'
             className='w-[7rem] h-[7rem] object-contain'
-          />
+          /> */}
           <p className='text-gray-900 font-bold cursor-pointer flex'>
             Chipmans Lawn & Snow Services
           </p>
