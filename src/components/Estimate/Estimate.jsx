@@ -134,11 +134,11 @@ const Estimate = () => {
           Submit
         </Button>
       </form>
-      <div className='mt-6 p-4 border border-green-500 rounded bg-white'>
+      <div className='mt-6 p-4 border border-green-500 rounded bg-white lg:w-[56%] w-full'>
         <h2 className='text-xl font-medium mb-4'>Selected Services</h2>
-        <ul>
+        <div className='flex flex-wrap'>
           {servicesRequested.map((service, index) => (
-            <li key={index} className='mb-2'>
+            <span key={index} className='mb-2'>
               <Chip
                 label={service}
                 onDelete={() => {
@@ -148,9 +148,10 @@ const Estimate = () => {
                 }}
                 deleteIcon={<Close />}
               />
-            </li>
+              {index !== servicesRequested.length - 1}
+            </span>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
