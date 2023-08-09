@@ -13,7 +13,7 @@ const About = () => {
         alignItems: "center",
         flexDirection: "column",
       }}
-      className='border-2 border-green-500 w-[77%] mx-auto my-10 rounded-lg'
+      className='border-2 border-green-500 bg-[#eeeeee] w-full lg:w-1/2 mx-auto my-10 rounded-lg'
     >
       <h1 className='text-2xl font-bold text-[#029c15] p-5'>About</h1>
       <div
