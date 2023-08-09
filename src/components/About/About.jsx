@@ -1,7 +1,9 @@
 import React from "react";
-import { aboutContent, aboutImage } from "../../constants";
+import { aboutContent, aboutImage, schedule } from "../../constants";
 
 const About = () => {
+  const scheduleArray = Object.entries(schedule);
+
   return (
     <div
       id='about'
@@ -11,6 +13,7 @@ const About = () => {
         alignItems: "center",
         flexDirection: "column",
       }}
+      className='border-2 border-green-500 w-[77%] mx-auto my-10 rounded-lg'
     >
       <h1 className='text-2xl font-bold text-[#029c15] p-5'>About</h1>
       <div
@@ -23,16 +26,22 @@ const About = () => {
         <img
           src={aboutImage.src}
           alt='Lawn'
-          style={{
-            width: "auto",
-            height: "480px",
-            objectFit: "contain",
-          }}
+          className='sm:w-[50%] lg:w-[30%]'
         />
-        <div className='border mt-5 border-green-500 rounded-lg p-10 w-1/2 break-words'>
+        <div className='sm:w-full lg:w-1/2 p-10 break-words mt-5 rounded-lg'>
           <p>{aboutContent.description}</p>
         </div>
       </div>
+      <ul className='mt-5 mb-5'>
+        <p className='underline font-bold ml-8'>Our Availibility</p>
+        {scheduleArray.map(([day, time], index) => (
+          <li key={index} className='flex flex-col mt-2'>
+            <span className='text-sm'>
+              {day}: {time}
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

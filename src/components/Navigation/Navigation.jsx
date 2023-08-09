@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../../constants";
-import { BusinessLogo } from "../../assets"; // ! If you have a business logo, import it here and uncomment line 18-22
+import { BusinessLogo } from "../../assets"; // ! If you have a business logo, add it to the assets folder for BusinessLogo and uncomment line 18-22
 import { Link as ScrollLink } from "react-scroll";
 
 const Navigation = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className='flex justify-between items-center bg-white p-5 fixed w-full'>
+    <nav className='flex justify-between items-center bg-white p-5 fixed w-full border-b border-green-500'>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
@@ -57,7 +57,7 @@ const Navigation = () => {
           <div
             className={`${
               toggle ? "flex" : "hidden"
-            } p-6 bg-gray-900 text-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 bg-gray-900 text-white fixed top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl z-50`}
           >
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
               {navLinks.map((link) => (

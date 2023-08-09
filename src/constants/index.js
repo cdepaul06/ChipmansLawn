@@ -19,6 +19,10 @@ const navLinks = [
     title: "Services",
   },
   {
+    id: "estimate",
+    title: "Request Estimate",
+  },
+  {
     id: "about",
     title: "About",
   },
@@ -34,6 +38,18 @@ const aboutContent = {
     "We strive to give our customers that small business feeling, catering" +
     " to their individual needs. Our team takes pride in the work we do and our customer's satisfaction is the number one priority.",
 };
+
+const schedule = {
+  Monday: "8:00 AM - 5:00 PM",
+  Tuesday: "8:00 AM - 5:00 PM",
+  Wednesday: "8:00 AM - 5:00 PM",
+  Thursday: "8:00 AM - 5:00 PM",
+  Friday: "8:00 AM - 5:00 PM",
+  Saturday: "8:00 AM - 5:00 PM",
+  Sunday: "Closed",
+};
+
+const contactPhone = "330-555-5555";
 
 // * Use the imports from above as the src for the images.
 const lawnImages = [
@@ -90,7 +106,7 @@ const aboutImage = {
 const servicesContent = [
   {
     id: "service-1",
-    title: "Spring & Summer Services",
+    title: "Spring & Summer",
     description: "Commercial & Residential",
     image: fencedYard,
     details: [
@@ -103,7 +119,7 @@ const servicesContent = [
   },
   {
     id: "service-2",
-    title: "Fall Services",
+    title: "Fall",
     description: "Commercial & Residential",
     image: yard1,
     details: [
@@ -115,7 +131,7 @@ const servicesContent = [
   // * copy and paste the above service and change the ID and content.
   {
     id: "service-3",
-    title: "Winter Services",
+    title: "Winter",
     description: "Commercial & Residential",
     image: snowPlow,
     details: [
@@ -126,5 +142,13 @@ const servicesContent = [
   },
 ];
 
-// If for whatever reason you add more constants to the global index you need to export them here.
-export { navLinks, aboutContent, lawnImages, servicesContent, aboutImage };
+// * If for whatever reason you add more constants to the global index you need to export them here.
+export {
+  navLinks,
+  aboutContent,
+  lawnImages,
+  servicesContent,
+  aboutImage,
+  schedule,
+  contactPhone,
+};

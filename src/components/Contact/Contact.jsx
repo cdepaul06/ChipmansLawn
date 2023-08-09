@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { contactPhone } from "../../constants";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -57,9 +58,10 @@ const Contact = () => {
   };
 
   return (
-    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center w-[45%]'>
+    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center lg:w-[45%] sm:w-[90%]'>
       <div className='text-center rounded-lg w-full sm:w-[75%] mt-[10px]'>
         <p className='text-2xl font-bold text-white'>Contact</p>
+        <p className='text-lg font-bold text-white'>Phone: {contactPhone}</p>
         <form
           ref={formRef}
           className='flex flex-col sm:flex-row justify-center mx-2 sm:mx-0'

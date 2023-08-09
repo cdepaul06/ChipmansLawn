@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { lawnImages } from "../../constants";
 
 const ImageCarousel = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // Cleanup - remove the event listener when the component is unmounted
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className='mx-auto w-[67%] border-2 border-black shadow-lg mt-8'>
       <Carousel
@@ -14,10 +29,10 @@ const ImageCarousel = () => {
         emulateTouch
         autoPlay
         stopOnHover
-        interval={5000}
-        transitionTime={2000}
-        centerMode
-        centerSlidePercentage={33.33}
+        interval={windowWidth > 768 ? 3000 : 5000}
+        transitionTime={windowWidth > 768 ? 1000 : 2000}
+        centerMode={windowWidth > 768}
+        centerSlidePercentage={windowWidth > 768 ? 33.33 : 100}
       >
         {lawnImages.map((image, index) => (
           <div

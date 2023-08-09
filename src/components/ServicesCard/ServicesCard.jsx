@@ -11,7 +11,7 @@ const ServicesCard = ({}) => {
           {servicesContent.map((service, index) => (
             <div
               key={index}
-              className='flex flex-col border border-green-500 rounded-lg overflow-hidden mt-[25px] w-full sm:w-[482px] px-4 sm:mx-2 mb-4 shadow-lg'
+              className='flex flex-col border border-green-500 rounded-lg overflow-hidden bg-[#eeeeee] mt-[25px] w-full sm:w-[482px] px-4 sm:mx-2 mb-4 shadow-lg'
             >
               <h3 className='text-2xl font-bold text-center p-4'>
                 {service.title}
